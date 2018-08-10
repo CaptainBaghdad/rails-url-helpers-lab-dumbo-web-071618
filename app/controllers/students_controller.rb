@@ -11,6 +11,7 @@ class StudentsController < ApplicationController
  
  
  def activate
+   @student = Student.find
     if @student.active
       @student.update(active: false)
     else
